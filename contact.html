@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>Contact us</title>
+</head>
+<body>
+    <header>
+        <div class="name-logo">
+            <img src="public/images/logo.PNG" alt="company logo" height="40px" width="40px">
+            <a href="index.html"><h1 class="heading">Eon Solutions</h1></a>
+        </div>
+        <div class="navigation">
+            <nav>
+                <a class="nav-item" href="index.html" >Home</a>
+                <a class="nav-item" href="">Products</a>
+                <a class="nav-item" href="login.html">Sign in</a>
+                <a class="nav-item" href="registration.html">Sign up</a>
+                <a class="nav-item" href="contact.html">Contact us</a>
+                <a class="nav-item" href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="form-items">
+        <div class="intro">We would love to hear from you.</div>
+        <form action="" class="newform">
+            <div class="">
+                
+                <div class="couple pad-topbottom">
+                    <div class="individual">
+                        <label for="fname">First name</label><br>
+                        <input type="text" id="fname" placeholder="John" onkeydown="validateName(this)" onfocusout="validateName(this)">
+                        <span class="error"></span>
+                    </div>
+                    <div class="individual">
+                        <label for="lname">Last name</label><br>
+                        <input type="text" id="lname" placeholder="Doe" onkeydown="validateName(this)" onfocusout="validateName(this)">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="pad-topbottom">
+                    <label for="phone">Phone No.</label><br>
+                    <input type="text" id="phone" placeholder="Phone" onkeydown="validatePhone(this)" onfoucusout="validateName(this)">
+                    <span class="error"></span>
+                </div>
+                <div class="pad-topbottom">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" placeholder="email@example.com" onkeydown="validateEmail(this)" onfoucusout="validateEmail(this)">
+                    <span class="error"></span>
+                </div>
+                <div class="pad-topbottom">
+                    <label for="message">Message</label><br>
+                    <textarea id="message" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-logo">
+            <img src="public/images/logo.PNG" alt="company logo">
+        </div>
+        <div class="copyright">
+            © 2023 Eon Solutions. All rights reserved.
+        </div>
+        <div class="socials">
+            <a href="https://x.com/" target="_blank"> <img src="/public/images/twitter_icon.png" alt=""></a>
+            <a href="https://github.com/" target="_blank"><img src="/public/images/github_logo.png" alt=""></a>
+        </div>
+    </footer>
+    <script src="public/script.js"></script>
+</body>
+</html>
+
+<!-- <div class="">
+    <div class="couple pad-topbottom">
+        <div class="individual">
+            <label for="fname">First name</label><br>
+            <input type="text" id="fname" placeholder="John">
+        </div>
+        <div class="individual">
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname" placeholder="Doe">
+        </div>
+    </div>
+    <div class="pad-topbottom">
+        <label for="phone">Phone No.</label><br>
+        <input type="text" id="phone" placeholder="Phone">
+    </div>
+    <div class="pad-topbottom">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" placeholder="email@example.com">
+    </div>
+    </div>
+    <div class="pad-topbottom">
+        <label for="message">Message</label><br>
+        <textarea id="message" cols="30" rows="10"></textarea>
+    </div>
+</div> -->
