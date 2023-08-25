@@ -27,11 +27,11 @@
         </div>
     </header>
     <div class="login">
-        <form action="" class="login-form">
+        <form action="" class="login-form" id="userlogin">
             <p class="login-intro">Welcome! Login with your account below.</p>
             <input type="text" placeholder="Username" class="login-input" onfocusout="validateName(this)"><br>
             <input type="password" placeholder="Password" class="login-input"><br>
-            <button type="submit" class="login-button">LOGIN</button>
+            <button type="submit" class="login-button" onclick="allFieldsFilled('userlogin')">LOGIN</button>
         </form>
     </div>
     <div class="login-options">
@@ -47,7 +47,7 @@
         </div>
         <div class="socials">
             <a href="https://x.com/" target="_blank"> <img src="/public/images/twitter_icon.png" alt=""></a>
-            <a href="https://github.com/" target="_blank"><img src="/public/images/github_logo.png" alt=""></a>
+            <a href="https://github.com/JoelFernandeswastaken" target="_blank"><img src="/public/images/github_logo.png" alt=""></a>
         </div>
     </footer>
 

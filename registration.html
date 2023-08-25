@@ -28,7 +28,7 @@
     </header>
     <div class="form-items">
         <div class="intro">Fill in the details to complete your registration.</div>
-        <form action="" class="newform">
+        <form action="" class="newform" id="regform">
             <div class="">
                 <div class="couple pad-topbottom">
                     <div class="individual">
@@ -74,7 +74,8 @@
                 </div>
                 <div class="pad-topbottom">
                     <label for="state">State</label><br>
-                    <select id="state">
+                    <select id="state" onfocusout="selectOptions(this)">
+                        <option value="" style="color: gray;">---Select state---</option>
                         <option value="Goa">Goa</option>
                         <option value="Kerala">Kerala</option>
                         <option value="Tamil Nadu">Tamil Nadu</option>
@@ -84,11 +85,7 @@
                 <div class="pad-topbottom">
                     <label for="city">City</label><br>
                     <select id="city">
-                        <option value="city-1">city-1</option>
-                        <option value="city-2">city-2</option>
-                        <option value="city-3">city-3</option>
-                        <option value="city-4">city-4</option>
-                        <option value="city-5">city-5</option>
+                        
                     </select>
                     <!-- <input type="text" id="city"> -->
                 </div>
@@ -105,7 +102,7 @@
                     <input type="password" id="confpass">
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="allFieldsFilled('regform')">Submit</button>
         </form>
     </div>
     <footer>
@@ -117,7 +114,7 @@
         </div>
         <div class="socials">
             <a href="https://x.com/" target="_blank"> <img src="/public/images/twitter_icon.png" alt=""></a>
-            <a href="https://github.com/" target="_blank"><img src="/public/images/github_logo.png" alt=""></a>
+            <a href="https://github.com/JoelFernandeswastaken" target="_blank"><img src="/public/images/github_logo.png" alt=""></a>
         </div>
     </footer>
 
