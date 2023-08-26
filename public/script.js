@@ -80,3 +80,28 @@ function allFieldsFilled(id){
         alert("Please fill all form fields.");
     }
 }
+
+function checkPass(x){
+    let pass1 = document.getElementById("password").value;
+    console.log(`pass1:${pass1}`);
+    let conf = x.value;
+    console.log(`conf:${conf}`);
+    if(pass1 === conf){
+        x.parentElement.lastElementChild.innerHTML = "";
+    }
+    else{
+        x.parentElement.lastElementChild.innerHTML = "Passwords don't match.";
+    }
+    // console.log(`conf:${pass1}`);
+    // validate(pass1, conf, x, "Passwords don't match");
+}
+
+function validatePassword(x){
+    let error = "Password 8 characters long. Must contain: Uppercase, Lowercase, Number, Special character";
+    let pass1 = document.getElementById("password").value;
+    let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=[\]{}|;:'",.<>?/]).{8,}$/;
+    validate(pattern, pass1, x, "Password 8 characters long. Must contain: Uppercase, Lowercase, Number, Special character");
+    // let specialChar = 
+    // let uppercase = 
+    // let lowercase = 
+}

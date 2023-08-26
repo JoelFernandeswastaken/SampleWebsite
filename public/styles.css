@@ -206,7 +206,8 @@ label{
 }
 #fname, #lname, #age, #dob{
     /* width: 250px; */
-    width: 100%;
+    min-width: 110%;
+    max-width: 110%;
 }
 #phone, #email, #address, #state, #city, #username, #password, #confpass{
     width: 100%
