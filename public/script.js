@@ -1,7 +1,7 @@
-const userAge = document.getElementById("age");
-// const inputField = document.getElementById("fname");
-// inputField.parentElement.lastElementChild.innerHTML = "hiuhuihui";
 
+const userAge = document.getElementById("age");
+
+// funciton to validate and check if user has entered a valid name
 function validateName(x){
     var pattern = /(^[a-zA-Z]+$)+/;
     var text = x.value;
@@ -15,6 +15,7 @@ function validateName(x){
     }
 }
 
+// function to calcualte users age and display calculated value
 function calcAge(x){
     let a = new Date();
     let currYear = a.getFullYear();
@@ -22,22 +23,23 @@ function calcAge(x){
     let age = currYear - birthYear;
     console.log(`age: ${age}`);
     userAge.value = age;
-
-    // console.log(x.value.slice(0, 4));
 }
 
+// funciton to validate and check if user has entered a valid email address
 function validateEmail(x){
     var pattern = /^[a-zA-Z.]+[0-9]*[@][a-zA-Z]{2,}[.][a-zA-Z]{2,3}$/;
     var text = x.value;
     validate(pattern, text, x, "Invalid email");
 }
 
+// funciton to validate and check if user has entered a phone number
 function validatePhone(x){
     var pattern = /^[0-9]{10}$/;
     var text = x.value;
     validate(pattern, text, x, "Invalid no.");
 }
 
+// function that takes as parameters the text, pattern to be matched, input element and error message to be displayed
 function validate(pattern, text, element, errorMessage){
     if(text.match(pattern)){
         element.parentElement.lastElementChild.innerHTML = "";
@@ -48,6 +50,7 @@ function validate(pattern, text, element, errorMessage){
     errorMessage = "";
 }
 
+// funciton to populate options for city, based on state selected
 function selectOptions(x){
     let selected = x.value;
     let options = document.getElementById("city");
@@ -65,6 +68,7 @@ function selectOptions(x){
     }
 }
 
+// funciton to check if all fields of form are filled
 function allFieldsFilled(id){
     let inputs = document.getElementById(id).getElementsByTagName("input");
     let filled = true;
@@ -81,6 +85,7 @@ function allFieldsFilled(id){
     }
 }
 
+// funciton to validate and check if pasword and confirm password match
 function checkPass(x){
     let pass1 = document.getElementById("password").value;
     console.log(`pass1:${pass1}`);
@@ -92,16 +97,12 @@ function checkPass(x){
     else{
         x.parentElement.lastElementChild.innerHTML = "Passwords don't match.";
     }
-    // console.log(`conf:${pass1}`);
-    // validate(pass1, conf, x, "Passwords don't match");
 }
 
+// funciton to validate and check if user has entered a secure password
 function validatePassword(x){
     let error = "Password 8 characters long. Must contain: Uppercase, Lowercase, Number, Special character";
     let pass1 = document.getElementById("password").value;
     let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=[\]{}|;:'",.<>?/]).{8,}$/;
     validate(pattern, pass1, x, "Password 8 characters long. Must contain: Uppercase, Lowercase, Number, Special character");
-    // let specialChar = 
-    // let uppercase = 
-    // let lowercase = 
 }

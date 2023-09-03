@@ -13,8 +13,8 @@
 <body>
     <header>
         <div class="name-logo">
-            <img src="public/images/logo.PNG" alt="company logo" height="40px" width="40px">
-            <a href="index.html"><h1 class="heading">Eon Solutions</h1></a>
+            <img src="public/images/logo new.png" alt="company logo" height="30px" width="30px" style="margin:0px 10px; padding: 5px; background-color: white; border-radius: 5px;">
+            <a href="index.html"><h1 class="heading gradient-text">Eon Solutions</h1></a>
         </div>
         <div class="navigation">
             <nav>
@@ -27,90 +27,93 @@
             </nav>
         </div>
     </header>
-    <div class="form-items">
-        <div class="intro">Fill in the details to complete your registration.</div>
-        <form action="" class="newform" id="regform">
-            <div class="">
-                <div class="couple pad-topbottom">
-                    <div class="individual">
-                        <label for="fname">First name</label><br>
-                        <input type="text" id="fname" placeholder="John" onkeydown="validateName(this)" onfocusout="validateName(this)">
+    <div class="form-container">
+        <div class="form-items">
+            <div class="intro">Fill in the details to complete your registration.</div>
+            <form action="" class="newform" id="regform">
+                <div class="">
+                    <div class="couple pad-topbottom">
+                        <div class="individual">
+                            <label for="fname">First name</label><br>
+                            <input type="text" id="fname" placeholder="John" oninput="validateName(this)" onfocusout="validateName(this)"><br>
+                            <span class="error"></span>
+                        </div>
+                        <div class="individual">
+                            <label for="lname">Last name</label><br>
+                            <input type="text" id="lname" placeholder="Doe" oninput="validateName(this)" onfocusout="validateName(this)"><br>
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="couple pad-topbottom">
+                        <div class="individual">
+                            <label for="dob">Date of birth</label><br>
+                            <input type="date" id="dob" onfocusout="calcAge(this)">
+                        </div>
+                        <div class="individual">
+                            <label for="age">Age</label><br>
+                            <input type="text" id="age" readonly>
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="">Gender</label><br>
+                        <input type="radio" id="male" value="male" name="gender">Male
+                        <input type="radio" id="female" value="female" name="gender">Female
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="phone">Phone</label><br>
+                        <input type="text" id="phone" placeholder="Phone" oninput="validatePhone(this)" onfocusout="validatePhone(this)">
                         <span class="error"></span>
                     </div>
-                    <div class="individual">
-                        <label for="lname">Last name</label><br>
-                        <input type="text" id="lname" placeholder="Doe" onkeydown="validateName(this)" onfocusout="validateName(this)">
+                    <div class="pad-topbottom">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" placeholder="email@example.com" oninput="validateEmail(this)" onfocusout="validateEmail(this)">
+                        <span class="error"></span>
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="address">Address</label><br>
+                        <input type="text" id="address">
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="state">State</label><br>
+                        <select id="state" onfocusout="selectOptions(this)">
+                            <option value="" style="color: gray;">---Select state---</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                        </select>
+                        <!-- <input type="text" id="state"><br> -->
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="city">City</label><br>
+                        <select id="city">
+                            
+                        </select>
+                        <!-- <input type="text" id="city"> -->
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="username">Username</label><br>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" oninput="validatePassword(this)" onfocusout="validatePassword(this)">
+                        <span class="error"></span>
+                    </div>
+                    <div class="pad-topbottom">
+                        <label for="confpass">Confirm password</label><br>
+                        <input type="password" id="confpass" onfocusout="checkPass(this)">
                         <span class="error"></span>
                     </div>
                 </div>
-                <div class="couple pad-topbottom">
-                    <div class="individual">
-                        <label for="dob">Date of birth</label><br>
-                        <input type="date" id="dob" onfocusout="calcAge(this)">
-                    </div>
-                    <div class="individual">
-                        <label for="age">Age</label><br>
-                        <input type="text" id="age" readonly>
-                        <span class="error"></span>
-                    </div>
-                </div>
-                <div class="pad-topbottom">
-                    <label for="">Gender</label><br>
-                    <input type="radio" id="male" value="male" name="gender">Male
-                    <input type="radio" id="female" value="female" name="gender">Female
-                </div>
-                <div class="pad-topbottom">
-                    <label for="phone">Phone No.</label><br>
-                    <input type="text" id="phone" placeholder="Phone" onkeydown="validatePhone(this)" onfocusout="validatePhone(this)">
-                    <span class="error"></span>
-                </div>
-                <div class="pad-topbottom">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" placeholder="email@example.com" onkeydown="validateEmail(this)" onfocusout="validateEmail(this)">
-                    <span class="error"></span>
-                </div>
-                <div class="pad-topbottom">
-                    <label for="address">Address</label><br>
-                    <input type="text" id="address">
-                </div>
-                <div class="pad-topbottom">
-                    <label for="state">State</label><br>
-                    <select id="state" onfocusout="selectOptions(this)">
-                        <option value="" style="color: gray;">---Select state---</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                    </select>
-                    <!-- <input type="text" id="state"><br> -->
-                </div>
-                <div class="pad-topbottom">
-                    <label for="city">City</label><br>
-                    <select id="city">
-                        
-                    </select>
-                    <!-- <input type="text" id="city"> -->
-                </div>
-                <div class="pad-topbottom">
-                    <label for="username">Username</label><br>
-                    <input type="text" id="username">
-                </div>
-                <div class="pad-topbottom">
-                    <label for="password">Password</label><br>
-                    <input type="password" id="password" onkeydown="validatePassword(this)" onfocusout="validatePassword(this)">
-                    <span class="error"></span>
-                </div>
-                <div class="pad-topbottom">
-                    <label for="confpass">Confirm password</label><br>
-                    <input type="password" id="confpass" onfocusout="checkPass(this)">
-                    <span class="error"></span>
-                </div>
-            </div>
-            <button type="submit" onclick="allFieldsFilled('regform')">Submit</button>
-        </form>
+                <button type="submit" onclick="allFieldsFilled('regform')">Submit</button>
+            </form>
+        </div>
     </div>
+    
     <footer>
         <div class="footer-logo">
-            <img src="public/images/logo.PNG" alt="company logo">
+            <img src="public/images/logo new.PNG" alt="company logo">
         </div>
         <div class="copyright">
             © 2023 Eon Solutions. All rights reserved.
